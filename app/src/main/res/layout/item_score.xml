@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_score"
+        android:layout_width="@dimen/icon_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/global_space_large"
+        android:layout_marginBottom="@dimen/global_space_large"
+        android:layout_marginTop="@dimen/global_space_medium"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_pdf_file"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- School Name -->
+    <TextView
+        android:id="@+id/tv_school_name"
+        android:layout_width="@dimen/global_space_xxxsmall"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/global_space_large"
+        android:layout_marginEnd="@dimen/global_space_large"
+        android:ellipsize="end"
+        android:lines="2"
+        android:textAppearance="@style/TextAppearance_Body1"
+        app:layout_constraintLeft_toRightOf="@id/iv_score"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_score"
+        tools:text="HENRY STREET SCHOOL FOR INTERNATIONAL STUDIES"/>
+
+    <!-- Math -->
+    <TextView
+        android:id="@+id/tv_sat_scores_math_title"
+        android:layout_width="@dimen/global_space_xxxsmall"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/global_space_large"
+        android:layout_marginEnd="@dimen/global_space_large"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/sat_scores_math"
+        android:textAppearance="@style/TextAppearance_Body3"
+        app:layout_constraintLeft_toRightOf="@id/iv_score"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_school_name" />
+
+    <TextView
+        android:id="@+id/tv_sat_scores_math"
+        android:layout_width="@dimen/global_space_xxxsmall"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/global_space_large"
+        android:layout_marginTop="@dimen/global_space_xsmall"
+        android:layout_marginEnd="@dimen/global_space_large"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textAppearance="@style/TextAppearance_Caption2"
+        android:textColor="@color/medGray"
+        app:layout_constraintLeft_toRightOf="@id/iv_score"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sat_scores_math_title"
+        tools:text="404" />
+
+    <!-- Reading -->
+    <TextView
+        android:id="@+id/tv_sat_scores_reading_title"
+        android:layout_width="@dimen/global_space_xxxsmall"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/global_space_large"
+        android:layout_marginEnd="@dimen/global_space_large"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/sat_scores_reading"
+        android:textAppearance="@style/TextAppearance_Body3"
+        app:layout_constraintLeft_toRightOf="@id/iv_score"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sat_scores_math"/>
+
+    <TextView
+        android:id="@+id/tv_sat_scores_reading"
+        android:layout_width="@dimen/global_space_xxxsmall"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/global_space_large"
+        android:layout_marginTop="@dimen/global_space_xsmall"
+        android:layout_marginEnd="@dimen/global_space_large"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textAppearance="@style/TextAppearance_Caption2"
+        android:textColor="@color/medGray"
+        app:layout_constraintLeft_toRightOf="@id/iv_score"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sat_scores_reading_title"
+        tools:text="378" />
+
+    <!-- Writing -->
+    <TextView
+        android:id="@+id/tv_sat_scores_writing_title"
+        android:layout_width="@dimen/global_space_xxxsmall"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/global_space_large"
+        android:layout_marginEnd="@dimen/global_space_large"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/sat_scores_writing"
+        android:textAppearance="@style/TextAppearance_Body3"
+        app:layout_constraintLeft_toRightOf="@id/iv_score"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sat_scores_reading"/>
+
+    <TextView
+        android:id="@+id/tv_sat_scores_writing"
+        android:layout_width="@dimen/global_space_xxxsmall"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/global_space_large"
+        android:layout_marginTop="@dimen/global_space_xsmall"
+        android:layout_marginEnd="@dimen/global_space_large"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textAppearance="@style/TextAppearance_Caption2"
+        android:textColor="@color/medGray"
+        app:layout_constraintLeft_toRightOf="@id/iv_score"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sat_scores_writing_title"
+        tools:text="932" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/global_space_xxsmall"
+        android:background="@color/lighterGray"
+        app:layout_constraintLeft_toRightOf="@id/iv_score"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sat_scores_writing"
+        android:layout_marginTop="@dimen/global_space_small_medium" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/global_space_xxsmall"
+        android:background="@color/pearlGray"
+        android:layout_marginTop="@dimen/global_space_small_medium"
+        app:layout_constraintLeft_toRightOf="@id/iv_score"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sat_scores_writing"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

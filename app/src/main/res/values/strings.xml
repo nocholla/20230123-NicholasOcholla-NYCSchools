@@ -7,6 +7,9 @@
     <string name="academic_opportunities">Academic Opportunities</string>
     <string name="language_classes">Language Classes</string>
     <string name="advanced_placement_courses">Advanced Placement Courses</string>
+    <string name="sat_scores_math">Math</string>
+    <string name="sat_scores_reading">Reading</string>
+    <string name="sat_scores_writing">Writing</string>
 
     <!-- Button -->
     <string name="btn_share">Share</string>

@@ -5,7 +5,11 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <!-- Global Content -->
+    <dimen name="global_space_xxxsmall">0dp</dimen>
+    <dimen name="global_space_xxsmall">1dp</dimen>
+    <dimen name="global_space_xsmall">2dp</dimen>
     <dimen name="global_space_small">8dp</dimen>
+    <dimen name="global_space_small_medium">12dp</dimen>
     <dimen name="global_space_medium">16dp</dimen>
     <dimen name="global_space_large">24dp</dimen>
     <dimen name="global_space_xlarge">32dp</dimen>
@@ -60,5 +64,6 @@
     <dimen name="multiline_edittext_padding">20dp</dimen>
     <dimen name="corner_radius_rounded_dialog">12dp</dimen>
     <dimen name="corner_radius_card_popup">10dp</dimen>
+    <dimen name="icon_width">30dp</dimen>
 
 </resources>
