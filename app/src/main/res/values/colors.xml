@@ -20,6 +20,9 @@
     <color name="lighterPearlGray">#E6F7F8FA</color>
     <color name="lighterSolidPearlGray">#F7F8FA</color>
     <color name="buttersGray">#bdbdbd</color>
+    <color name="blueHover">#1252b3</color>
+    <color name="blueRippleEnd">#0e69c6</color>
+    <color name="blueRippleStart">#0f3699</color>
 
     <!-- Secondary -->
     <color name="halfBlueCTA">#91C7FF</color>

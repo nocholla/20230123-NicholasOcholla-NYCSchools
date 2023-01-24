@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">20230123-NicholasOcholla-NYCSchools</string>
+    <string name="app_name">NYC Schools</string>
+
+    <!-- General -->
+    <string name="new_york_city_schools">New York City Schools</string>
+    <string name="overview">Overview</string>
+    <string name="academic_opportunities">Academic Opportunities</string>
+    <string name="language_classes">Language Classes</string>
+    <string name="advanced_placement_courses">Advanced Placement Courses</string>
+
+    <!-- Button -->
+    <string name="btn_share">Share</string>
+
 </resources>

@@ -8,6 +8,8 @@
     <dimen name="global_space_small">8dp</dimen>
     <dimen name="global_space_medium">16dp</dimen>
     <dimen name="global_space_large">24dp</dimen>
+    <dimen name="global_space_xlarge">32dp</dimen>
+    <dimen name="global_space_xxlarge">40dp</dimen>
     <dimen name="global_space_margin_horizontal">24dp</dimen>
 
     <!-- School -->
