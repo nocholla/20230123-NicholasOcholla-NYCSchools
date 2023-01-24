@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -30,15 +33,44 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    dataBinding {
+        enabled = true
+    }
+}
+
+kapt {
+    generateStubs = true
 }
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.6.0'
-    implementation 'com.google.android.material:material:1.7.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation "androidx.core:core-ktx:$rootProject.coreKtxVersion"
+    implementation "androidx.appcompat:appcompat:$rootProject.appcompatVersion"
+    implementation "com.google.android.material:material:$rootProject.materialVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintlayoutVersion"
+    implementation "androidx.recyclerview:recyclerview:$rootProject.recyclerviewVersion"
+    implementation "androidx.cardview:cardview:$rootProject.cardviewVersion"
+    implementation "androidx.percentlayout:percentlayout:$rootProject.percentlayoutVersion"
+    implementation "androidx.browser:browser:$rootProject.browserVersion"
+
+    // GSON
+    implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+
+    // Picasso
+    implementation "com.squareup.picasso:picasso:$rootProject.picassoVersion"
+
+    testImplementation "junit:junit:$rootProject.junitVersion"
+    androidTestImplementation "androidx.test.ext:junit:$rootProject.testJunitVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoVersion"
+
+    // Roboelectric and Mockito
+    testImplementation "org.robolectric:robolectric:$rootProject.robolectric_version"
+    testImplementation "org.powermock:powermock-module-junit4:$rootProject.powermock_version"
+    testImplementation "org.powermock:powermock-module-junit4-rule:$rootProject.powermock_version"
+    testImplementation "org.powermock:powermock-api-mockito:$rootProject.powermock_version"
+    testImplementation "org.powermock:powermock-classloading-xstream:$rootProject.powermock_version"
 }
