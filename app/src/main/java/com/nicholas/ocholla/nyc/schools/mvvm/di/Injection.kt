@@ -14,14 +14,14 @@ import retrofit2.converter.gson.GsonConverterFactory
 object Injection {
 
     fun provideTasksRepository(context: Context): Repository {
-
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
         val apiService = retrofit.create(ApiService::class.java)
+
         return Repository.getInstance(RemoteDataSource.getInstance(apiService))
     }
-    
+
 }
