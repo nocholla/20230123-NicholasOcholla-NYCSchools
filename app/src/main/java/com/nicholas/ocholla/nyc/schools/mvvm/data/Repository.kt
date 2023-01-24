@@ -40,5 +40,5 @@ class Repository(private val remoteDataSource: DataSource) : DataSource {
     override fun getScores(page: Int, callback: DataSource.GetScoresCallback) {
         remoteDataSource.getScores(page, callback)
     }
-    
+
 }
