@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">20dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Global Content -->
+    <dimen name="global_space_small">8dp</dimen>
+    <dimen name="global_space_medium">16dp</dimen>
+    <dimen name="global_space_large">24dp</dimen>
+    <dimen name="global_space_margin_horizontal">24dp</dimen>
+
+    <!-- School -->
+    <dimen name="school_margin_card">2dp</dimen>
+
+    <!-- TextAppearance Styles -->
+    <dimen name="text_appearance_headline1_textsize">24sp</dimen>
+    <dimen name="text_appearance_headline2_textsize">20sp</dimen>
+    <dimen name="text_appearance_headline3_textsize">16sp</dimen>
+    <dimen name="text_appearance_headline4_textsize">14sp</dimen>
+    <dimen name="text_appearance_headline5_textsize">16sp</dimen>
+    <dimen name="text_appearance_description_textsize">18sp</dimen>
+    <dimen name="text_appearance_subtitle_textsize">16sp</dimen>
+    <dimen name="text_appearance_body_textsize">16sp</dimen>
+    <dimen name="text_appearance_body1_textsize">16sp</dimen>
+    <dimen name="text_appearance_body2_textsize">16sp</dimen>
+    <dimen name="text_appearance_body3_textsize">14sp</dimen>
+    <dimen name="text_appearance_body4_textsize">14sp</dimen>
+    <dimen name="text_appearance_intro1_textsize">14sp</dimen>
+    <dimen name="text_appearance_link_textsize">14sp</dimen>
+    <dimen name="text_appearance_caption1_textsize">12sp</dimen>
+    <dimen name="text_appearance_caption2_textsize">12sp</dimen>
+    <dimen name="text_appearance_micro1_textsize">10sp</dimen>
+    <dimen name="text_appearance_micro2_textsize">10sp</dimen>
+    <dimen name="text_appearance_card_title_textsize">24sp</dimen>
+    <dimen name="text_appearance_digits1_textsize">48sp</dimen>
+    <dimen name="text_appearance_digits2_textsize">20sp</dimen>
+    <dimen name="text_appearance_button1_textsize">14sp</dimen>
+    <dimen name="text_appearance_digits_textsize">48sp</dimen>
+    <dimen name="text_appearance_sfpro_textsize">17sp</dimen>
+
+    <!-- Buttons-->
+    <dimen name="btn_next_padding_sides">20dp</dimen>
+    <dimen name="btn_live_black_padding_sides">20dp</dimen>
+    <dimen name="btn_live_red_padding_sides">14dp</dimen>
+    <dimen name="base_button_height">40dp</dimen>
+    <dimen name="live_button_height">34dp</dimen>
+    <dimen name="button_min_width">110dp</dimen>
+    <dimen name="button_max_width">280dp</dimen>
+    <dimen name="btn_primary_rounded_radius">25dp</dimen>
+    <dimen name="calendar_button_diameter">32dp</dimen>
+    <dimen name="calendar_button_diameter_max">35dp</dimen>
+
+    <!-- Tab Layout Nav -->
+    <dimen name="tab_text_size_home">16sp</dimen>
+
+    <!-- General -->
+    <dimen name="multiline_edittext_padding">20dp</dimen>
+    <dimen name="corner_radius_rounded_dialog">12dp</dimen>
+    <dimen name="corner_radius_card_popup">10dp</dimen>
+
+</resources>

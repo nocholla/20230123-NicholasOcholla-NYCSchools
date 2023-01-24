@@ -1,0 +1,600 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="BaseAppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="BaseAppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- app actionbar color-->
+        <item name="colorPrimary">@color/primaryBlue</item>
+        <!-- system status bar color-->
+        <item name="colorPrimaryDark">@color/primaryBlue</item>
+        <item name="colorAccent">@color/primaryBlue</item>
+
+        <item name="android:listPreferredItemPaddingStart">30dp</item>
+        <item name="android:textAppearance">@style/TextAppearance_Body4</item>
+        <item name="android:statusBarColor">@color/white</item>
+
+        <item name="android:windowActionBarOverlay">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+
+        <item name="popupMenuStyle">@style/popupMenu</item>
+        <item name="android:popupMenuStyle">@style/popupMenu</item>
+
+        <!-- Material Calendar -->
+        <item name="materialCalendarStyle">@style/Widget.MaterialComponents.MaterialCalendar</item>
+        <item name="materialCalendarFullscreenTheme">
+            @style/CustomThemeOverlay_MaterialCalendar_Fullscreen
+        </item>
+        <item name="materialCalendarTheme">@style/ThemeOverlay.MaterialComponents.MaterialCalendar
+        </item>
+        <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
+
+        <!-- Compose theme attr -->
+        <item name="textAppearanceHeadline2">@style/TextAppearance_Headline2</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance_Headline5</item>
+    </style>
+
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/cornercircle</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+    </style>
+
+    <!-- Toolbar start -->
+    <style name="ToolbarStyle" parent="Widget.AppCompat.Light.ActionBar.TabBar">
+        <item name="titleTextAppearance">@style/TextAppearance_Headline3</item>
+        <item name="colorControlNormal">@color/bbBlack</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:pointerIcon" tools:targetApi="n">hand</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+        <item name="actionMenuTextColor">@color/primaryBlue</item>
+        <item name="android:actionMenuTextColor">@color/primaryBlue</item>
+        <item name="android:actionMenuTextAppearance">@style/TabletDialogTheme</item>
+        <item name="subtitleTextAppearance">@style/TextAppearance_Toolbar_Subtitle</item>
+        <item name="divider">@null</item>
+    </style>
+
+    <!-- Toolbar end -->
+
+    <style name="AppTheme.ProgramDetailsActionBar" parent="ThemeOverlay.AppCompat.ActionBar">
+        <!--Elevation to zero to remove the shadow-->
+        <item name="elevation">0dp</item>
+    </style>
+
+    <!--Dialog begin-->
+    <style name="RoundedCornersDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@drawable/bg_dialog_rounded_corners</item>
+        <item name="android:windowMinWidthMajor">60%</item>
+        <item name="android:windowMinWidthMinor">85%</item>
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="colorPrimary">@color/primaryBlue</item>
+        <item name="colorPrimaryDark">@color/primaryBlue</item>
+        <item name="colorAccent">@color/primaryBlue</item>
+    </style>
+
+    <style name="RoundedCornersDialogThemeProfiles" parent="RoundedCornersDialogTheme">
+        <item name="android:background">@drawable/dialog_transparent_rectangle</item>
+    </style>
+
+    <style name="AppDialogTheme" parent="Theme.AppCompat.Light.Dialog.MinWidth">
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimary">@color/primaryBlue</item>
+        <!-- system status bar color-->
+        <item name="colorPrimaryDark">@color/primaryBlue</item>
+        <item name="colorAccent">@color/primaryBlue</item>
+    </style>
+
+    <style name="MatchParentDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="TabletDialogTheme" parent="AppDialogTheme">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="TransparentDialog" parent="android:Theme.Holo.Dialog.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="FloatingTransparentDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowMinWidthMajor">60%</item>
+        <item name="android:windowMinWidthMinor">85%</item>
+        <item name="colorPrimary">@color/primaryBlue</item>
+        <item name="colorPrimaryDark">@color/primaryBlue</item>
+        <item name="colorAccent">@color/primaryBlue</item>
+    </style>
+
+    <!-- Tab Styles start-->
+    <style name="ThemeRegularLatofont" parent="AppTheme">
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="fontFamily">@font/lato</item>
+    </style>
+    <!-- Tab Styles end-->
+
+    <!-- Buttons -->
+    <style name="baseButton">
+        <item name="android:layout_height">@dimen/base_button_height</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:pointerIcon" tools:targetApi="n">hand</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAppearance">@style/TextAppearance_Button</item>
+        <item name="android:paddingStart">@dimen/btn_next_padding_sides</item>
+        <item name="android:paddingEnd">@dimen/btn_next_padding_sides</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="primaryButton" parent="baseButton">
+        <item name="android:background">@drawable/button_primary_bg</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:minWidth">@dimen/button_min_width</item>
+    </style>
+
+    <style name="primaryButtonBlack" parent="baseButton">
+        <item name="android:background">@drawable/button_primary_bg_black</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:minWidth">@dimen/button_min_width</item>
+    </style>
+
+    <style name="primaryButtonGreen" parent="baseButton">
+        <item name="android:background">@drawable/button_primary_bg_green</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:minWidth">@dimen/button_min_width</item>
+    </style>
+
+    <style name="secondaryButton" parent="baseButton">
+        <item name="android:background">@drawable/button_secondary_bg</item>
+    </style>
+
+    <style name="filterButton" parent="baseButton">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:background">@drawable/button_filter_bg</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:layout_marginVertical">4dp</item>
+    </style>
+
+    <style name="secondaryButton.White" parent="secondaryButton">
+        <item name="android:background">@drawable/button_secondary_bg_white</item>
+    </style>
+
+    <style name="secondaryButton.BlackAndWhite" parent="secondaryButton">
+        <item name="android:background">@drawable/button_secondary_bg_white</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="tertiaryButton" parent="baseButton">
+        <item name="android:background">@drawable/button_tertiary_bg</item>
+    </style>
+
+    <style name="primarySquareButton" parent="baseButton">
+        <item name="android:background">@drawable/blue_back_white_ripple</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="secondarySquareButton" parent="primarySquareButton">
+        <item name="android:background">@drawable/white_back_blue_ripple</item>
+        <item name="android:textColor">@color/medGray</item>
+    </style>
+
+    <style name="circularButton" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/circular_button_bg_selector</item>
+        <item name="android:button">@android:color/transparent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/primaryBlue</item>
+        <item name="android:textAppearance">@style/TextAppearance_Body3</item>
+        <item name="android:pointerIcon" tools:targetApi="n">hand</item>
+        <item name="android:foreground">@drawable/circle_ripple_dark</item>
+    </style>
+
+    <style name="circularButtonWithIcon" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:pointerIcon" tools:targetApi="n">hand</item>
+    </style>
+
+    <style name="baseLiveButton" parent="baseButton">
+        <item name="textAllCaps">true</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">@dimen/live_button_height</item>
+        <item name="android:textAppearance">@style/TextAppearance_Body3</item>
+
+    </style>
+
+    <style name="liveRedButton" parent="baseLiveButton">
+        <item name="android:background">@drawable/rounded_corner_bg_live</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:paddingStart">@dimen/btn_live_red_padding_sides</item>
+        <item name="android:paddingEnd">@dimen/btn_live_red_padding_sides</item>
+    </style>
+
+    <style name="liveWhiteButton" parent="baseLiveButton">
+        <item name="android:background">@drawable/rounded_corner_bg_live_white</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:paddingStart">@dimen/btn_live_black_padding_sides</item>
+        <item name="android:paddingEnd">@dimen/btn_live_black_padding_sides</item>
+    </style>
+
+    <!-- Spinner -->
+    <style name="roundedSpinner" parent="Widget.AppCompat.Spinner.DropDown">
+        <item name="android:textAppearance">@style/TextAppearance_Body4</item>
+        <item name="android:popupBackground">@drawable/spinner_rounded_corners</item>
+    </style>
+
+    <!-- PopupMenu -->
+    <style name="popupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@drawable/spinner_rounded_corners</item>
+        <item name="android:textAppearance">@style/TextAppearance_Body4</item>
+    </style>
+
+    <!--Style Guide Starts-->
+    <style name="BaseTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/bbBlack</item>
+    </style>
+
+    <style name="TextAppearance_Headline1" parent="BaseTextAppearance">
+        <item name="android:fontFamily">@font/lato_black</item>
+        <item name="android:textSize">@dimen/text_appearance_headline1_textsize</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextAppearance_SFProText" parent="BaseTextAppearance">
+        <item name="android:fontFamily">@font/lato_black</item>
+        <item name="android:textSize">@dimen/text_appearance_sfpro_textsize</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance_Headline1_Blue" parent="TextAppearance_Headline1">
+        <item name="android:textColor">@color/primaryBlue</item>
+    </style>
+
+    <style name="TextAppearance_Headline2" parent="BaseTextAppearance">
+        <item name="android:fontFamily">@font/lato_black</item>
+        <item name="android:textSize">@dimen/text_appearance_headline2_textsize</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextAppearance_Headline2_MedGray" parent="TextAppearance_Headline2">
+        <item name="android:textColor">@color/medGray</item>
+    </style>
+
+    <style name="TextAppearance_Headline3" parent="BaseTextAppearance">
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <item name="android:textSize">@dimen/text_appearance_headline3_textsize</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextAppearance_Headline4" parent="BaseTextAppearance">
+        <item name="android:textSize">@dimen/text_appearance_headline3_textsize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+
+    <style name="TextAppearance_Headline5" parent="BaseTextAppearance">
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <item name="android:textSize">@dimen/text_appearance_headline5_textsize</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance_CardTitle" parent="BaseTextAppearance">
+        <item name="android:fontFamily">@font/lato_black_italic</item>
+        <item name="android:textSize">@dimen/text_appearance_card_title_textsize</item>
+        <item name="android:letterSpacing">0.026</item>
+    </style>
+
+    <style name="TextAppearance_Digits" parent="BaseTextAppearance">
+        <item name="android:fontFamily">@font/lato_regular</item>
+        <item name="android:textSize">@dimen/text_appearance_digits1_textsize</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="TextAppearance_Digits2" parent="BaseTextAppearance">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">@dimen/text_appearance_digits2_textsize</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextAppearance_Body1" parent="BaseTextAppearance">
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <item name="android:textSize">@dimen/text_appearance_subtitle_textsize</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="TextAppearance_Body1_MedGray" parent="TextAppearance_Body1">
+        <item name="android:textColor">@color/medGray</item>
+    </style>
+
+    <style name="TextAppearance_Body2" parent="BaseTextAppearance">
+        <item name="android:fontFamily">@font/lato_regular</item>
+        <item name="android:textColor">@color/bbBlack</item>
+        <item name="android:textSize">@dimen/text_appearance_body2_textsize</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextAppearance_Body2_MedGray" parent="TextAppearance_Body2">
+        <item name="android:textColor">@color/medGray</item>
+    </style>
+
+    <style name="TextAppearance_Body2_LatoBlack" parent="TextAppearance_Body2">
+        <item name="android:fontFamily">@font/lato_black</item>
+    </style>
+
+    <style name="TextAppearance_Body3_Blue" parent="TextAppearance_Body3">
+        <item name="android:textColor">@color/primaryBlue</item>
+    </style>
+
+    <style name="TextAppearance_Body3" parent="BaseTextAppearance">
+        <item name="android:textSize">@dimen/text_appearance_body3_textsize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="TextAppearance_InviteState" parent="TextAppearance_Body4">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxWidth">200dp</item>
+        <item name="android:maxLines">5</item>
+    </style>
+
+    <style name="TextAppearance_Body4" parent="BaseTextAppearance">
+        <item name="android:textSize">@dimen/text_appearance_body4_textsize</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <style name="TextAppearance_Body4_Blue" parent="TextAppearance_Body4">
+        <item name="android:textColor">@color/primaryBlue</item>
+    </style>
+
+    <style name="TextAppearance_Body4_MedGray" parent="TextAppearance_Body4">
+        <item name="android:textColor">@color/medGray</item>
+    </style>
+
+    <style name="TextAppearance_Body4_MedGray_Regular" parent="TextAppearance_Body4_MedGray">
+        <item name="android:fontFamily">@font/lato_regular</item>
+    </style>
+
+    <style name="TextAppearance_Body4_DisabledGray" parent="TextAppearance_Body4">
+        <item name="android:textColor">@color/disabledGray</item>
+    </style>
+
+    <style name="TextAppearance_Body4_White" parent="TextAppearance_Body4">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextAppearance_Caption1" parent="BaseTextAppearance">
+        <item name="android:textSize">@dimen/text_appearance_caption1_textsize</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <style name="TextAppearance_Caption2" parent="BaseTextAppearance">
+        <item name="android:textSize">@dimen/text_appearance_caption1_textsize</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <style name="TextAppearance_Caption_Blue" parent="TextAppearance_Caption2">
+        <item name="android:textColor">@color/primaryBlue</item>
+    </style>
+
+    <style name="TextAppearance_Toolbar_Subtitle" parent="TextAppearance_Micro1">
+        <item name="android:textColor">@color/medGray</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextAppearance_Micro1" parent="BaseTextAppearance">
+        <item name="android:textSize">@dimen/text_appearance_micro1_textsize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:lineSpacingExtra">1dp</item>
+    </style>
+
+    <style name="TextAppearance_Micro2" parent="BaseTextAppearance">
+        <item name="android:textSize">@dimen/text_appearance_micro1_textsize</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:lineSpacingExtra">1dp</item>
+    </style>
+
+    <style name="TextAppearance_Micro3" parent="BaseTextAppearance">
+        <item name="android:textSize">@dimen/text_appearance_subtitle_textsize</item>
+        <item name="android:fontFamily">@font/lato_light</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:lineSpacingExtra">1dp</item>
+    </style>
+
+    <style name="TextAppearance_Intro1" parent="BaseTextAppearance">
+        <item name="android:textSize">@dimen/text_appearance_intro1_textsize</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:lineSpacingExtra">10sp</item>
+        <item name="android:textColor">@color/bbBlack</item>
+    </style>
+
+    <style name="TextAppearance_Button" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/primaryBlue</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <item name="android:textSize">@dimen/text_appearance_button1_textsize</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TextAppearance_Link" parent="BaseTextAppearance">
+        <item name="android:textColor">@color/primaryBlue</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="TextAppearanceLato_MainNavTabs" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/tab_text_size_home</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance_Transparent" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/transparent</item>
+    </style>
+
+    <!--Style Guide Ends-->
+
+    <style name="ButtonRoundedBorderDropdown" parent="Widget.AppCompat.Button">
+        <item name="android:textAppearance">@style/TextAppearance_Body4</item>
+        <item name="android:textColor">@color/bbBlack</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:background">@drawable/rounded_corner_transparent_rectangle</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:drawableEnd">@drawable/ic_small_arrow_drop_down</item>
+        <item name="android:paddingStart">@dimen/global_space_medium</item>
+        <item name="android:paddingEnd">@dimen/global_space_medium</item>
+        <item name="android:gravity">top|start</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!-- ##### To be redesigned (DurationPicker) ##### -->
+
+    <style name="DurationPickerTextColorStyle">
+        <item name="android:textColorPrimary">@color/bbBlack</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="DurationPickerTitleStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/primaryBlue</item>
+    </style>
+
+    <style name="DurationPickerTextView">
+        <item name="android:textColor">@color/bbBlack</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TransparentTextAppearance">
+        <item name="android:textColor">@color/transparent</item>
+    </style>
+
+    <style name="MultilineEditTextAppearance">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:gravity">top|start</item>
+        <item name="android:inputType">textMultiLine|textCapSentences</item>
+        <item name="android:overScrollMode">always</item>
+        <item name="android:scrollbarStyle">insideInset</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:padding">@dimen/multiline_edittext_padding</item>
+        <item name="android:textColorHint">@color/disabledGray</item>
+        <item name="android:textAppearance">@style/TextAppearance_Body2</item>
+    </style>
+
+    <!--Reaction Button Style-->
+    <style name="ReactImageButton">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:cropToPadding">false</item>
+        <item name="android:padding">7dp</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--Material Calendar Style-->
+    <style name="CustomThemeOverlay_MaterialCalendar_Fullscreen" parent="@style/ThemeOverlay.MaterialComponents.MaterialCalendar.Fullscreen">
+        <item name="materialCalendarStyle">@style/Custom_MaterialCalendar.Fullscreen</item>
+    </style>
+
+    <style name="Custom_MaterialCalendar.Fullscreen" parent="@style/Widget.MaterialComponents.MaterialCalendar.Fullscreen">
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+    <style name="Widget.AppTheme.MaterialDatePicker" parent="ThemeOverlay.MaterialComponents.MaterialCalendar"></style>
+
+    <style name="Widget.AppTheme.MaterialCalendar.HeaderToggleButton" parent="Widget.MaterialComponents.MaterialCalendar.HeaderToggleButton">
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <!-- Customize your Profile   -->
+    <style name="CustomizeYourProfileActivityTheme" parent="BaseAppTheme">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/pearlGray</item>
+        <item name="toolbarStyle">@style/ToolbarStyle.CustomizeProfile</item>
+    </style>
+
+    <style name="ToolbarStyle.CustomizeProfile" parent="ToolbarStyle">
+        <item name="android:background">@color/pearlGray</item>
+    </style>
+
+    <style name="DocumentEmptyStateCornerRadius">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">10dp</item>
+        <item name="cornerSizeTopLeft">40dp</item>
+        <item name="cornerSizeBottomRight">10dp</item>
+        <item name="cornerSizeBottomLeft">10dp</item>
+    </style>
+
+    <style name="promoPrimaryCTA" parent="primaryButton">
+        <item name="android:maxLines">1</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_appearance_headline2_textsize</item>
+    </style>
+
+    <style name="promoDeclineButton" parent="baseButton">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/buttersGray</item>
+    </style>
+
+</resources>
