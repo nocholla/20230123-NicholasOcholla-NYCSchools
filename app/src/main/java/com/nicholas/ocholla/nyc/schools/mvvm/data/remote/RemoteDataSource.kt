@@ -1,8 +1,8 @@
 package com.nicholas.ocholla.nyc.schools.mvvm.data.remote
 
 import com.nicholas.ocholla.nyc.schools.mvvm.data.DataSource
-import com.nicholas.ocholla.nyc.schools.mvvm.data.model.Schools
-import com.nicholas.ocholla.nyc.schools.mvvm.data.model.Scores
+import com.nicholas.ocholla.nyc.schools.mvvm.model.Schools
+import com.nicholas.ocholla.nyc.schools.mvvm.model.Scores
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

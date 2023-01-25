@@ -1,4 +1,4 @@
-package com.nicholas.ocholla.nyc.schools.mvvm.data.model
+package com.nicholas.ocholla.nyc.schools.mvvm.model
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable

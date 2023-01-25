@@ -1,7 +1,7 @@
 package com.nicholas.ocholla.nyc.schools.mvvm.data
 
-import com.nicholas.ocholla.nyc.schools.mvvm.data.model.Schools
-import com.nicholas.ocholla.nyc.schools.mvvm.data.model.Scores
+import com.nicholas.ocholla.nyc.schools.mvvm.model.Schools
+import com.nicholas.ocholla.nyc.schools.mvvm.model.Scores
 
 /**
  * Main entry point for accessing data.
