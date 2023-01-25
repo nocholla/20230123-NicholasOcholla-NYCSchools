@@ -11,6 +11,7 @@
     <string name="sat_scores_reading">Reading</string>
     <string name="sat_scores_writing">Writing</string>
     <string name="error_text">An error occurred while loading Data.</string>
+    <string name="school">School</string>
 
     <!-- Button -->
     <string name="btn_share">Share</string>

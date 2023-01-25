@@ -66,4 +66,7 @@
     <dimen name="corner_radius_card_popup">10dp</dimen>
     <dimen name="icon_width">30dp</dimen>
 
+    <!-- Toolbar -->
+    <dimen name="toolbar_margin_top">55dp</dimen>
+
 </resources>
