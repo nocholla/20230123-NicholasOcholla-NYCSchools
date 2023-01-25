@@ -69,11 +69,19 @@ dependencies {
     // Lifecycle
     implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifeCycleExtensionsVersion"
 
+    // JUnit
     testImplementation "junit:junit:$rootProject.junitVersion"
-    testImplementation "org.mockito:mockito-inline:$mockitoVersion"
+
+    // Mockito
+    testImplementation "org.mockito:mockito-inline:$rootProject.mockitoInlineVersion"
+    testImplementation "org.mockito:mockito-core:$rootProject.mockitoCoreVersion"
+    androidTestImplementation "org.mockito:mockito-android:$rootProject.mockitoAndroidVersion"
+
+    // Arch
     testImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"
     androidTestImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"
-
+    
+    // Support
     androidTestImplementation "com.android.support.test:runner:$rootProject.testRunnerVersion"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
 }
