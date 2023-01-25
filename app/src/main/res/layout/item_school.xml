@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/global_space_small"
-    android:layout_marginHorizontal="@dimen/global_space_margin_horizontal">
+    android:layout_marginHorizontal="@dimen/global_space_small">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_school"
@@ -38,12 +38,19 @@
             <TextView
                 android:id="@+id/tv_school_name"
                 style="@style/TextAppearance_Body2"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/global_space_medium"
-                app:layout_constraintStart_toEndOf="@id/iv_school"
+                android:layout_marginTop="@dimen/global_space_small"
+                android:layout_marginEnd="@dimen/global_space_medium"
+                android:textColor="@color/medGray"
+                android:scrollHorizontally="false"
+                android:ellipsize="end"
+                android:maxLines="1"
+                tools:text="Brooklyn School for Music Theatre"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iv_school"
-                tools:text="Brooklyn School for Music Theatre" />
+                app:layout_constraintStart_toEndOf="@id/iv_school" />
 
             <TextView
                 android:id="@+id/tv_overview_paragraph"
@@ -51,7 +58,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/global_space_small"
-                android:paddingEnd="@dimen/global_space_large"
+                android:layout_marginEnd="@dimen/global_space_medium"
                 android:textColor="@color/medGray"
                 android:scrollHorizontally="false"
                 android:ellipsize="end"
