@@ -19,6 +19,7 @@ ext {
     constraintlayoutVersion = '2.1.4'
     recyclerviewVersion = '1.2.1'
     cardviewVersion = '1.0.0'
+    swiperefreshVersion = '1.1.0'
 
     lifeCycleExtensionsVersion = '1.1.1'
     supportVersion = '28.0.0'
