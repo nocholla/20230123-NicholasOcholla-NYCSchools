@@ -70,13 +70,10 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifeCycleExtensionsVersion"
 
     testImplementation "junit:junit:$rootProject.junitVersion"
-    androidTestImplementation "androidx.test.ext:junit:$rootProject.testJunitVersion"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoVersion"
+    testImplementation "org.mockito:mockito-inline:$mockitoVersion"
+    testImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"
+    androidTestImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"
 
-    // Roboelectric and Mockito
-    testImplementation "org.robolectric:robolectric:$rootProject.robolectric_version"
-    testImplementation "org.powermock:powermock-module-junit4:$rootProject.powermock_version"
-    testImplementation "org.powermock:powermock-module-junit4-rule:$rootProject.powermock_version"
-    testImplementation "org.powermock:powermock-api-mockito:$rootProject.powermock_version"
-    testImplementation "org.powermock:powermock-classloading-xstream:$rootProject.powermock_version"
+    androidTestImplementation "com.android.support.test:runner:$rootProject.testRunnerVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
 }
