@@ -16,6 +16,7 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.nicholas.ocholla.nyc.schools.mvvm.R
 import com.nicholas.ocholla.nyc.schools.mvvm.util.addDebouncedClickListener
 import java.util.*
@@ -41,7 +42,6 @@ class SchoolDetailActivity : AppCompatActivity() {
         }
 
         // Get Intents from School List Adapter
-        // Intents
         val intent = intent
 
         val schoolName = intent.getStringExtra("INTENT_EXTRA_SCHOOL_NAME")
@@ -61,6 +61,7 @@ class SchoolDetailActivity : AppCompatActivity() {
         val locationTV = findViewById<TextView>(R.id.tv_location_content)
         val phoneTV = findViewById<TextView>(R.id.tv_phone_content)
         val emailTV = findViewById<TextView>(R.id.tv_email_content)
+        val schoolScoresFAB = findViewById<FloatingActionButton>(R.id.fab_school_scores)
 
         // Bind Data
         schoolNameTV.text = schoolName
@@ -73,6 +74,7 @@ class SchoolDetailActivity : AppCompatActivity() {
             finish()
         }
 
+        // School Feedback
         shareCV.addDebouncedClickListener {
             val targetShareIntents = ArrayList<Intent>()
             val shareIntent = Intent()
@@ -122,14 +124,20 @@ class SchoolDetailActivity : AppCompatActivity() {
             }
         }
 
+        // Share School On Social Media
         socialCV.addDebouncedClickListener {
             shareSocial()
         }
 
+        // Open School Website
         websiteCV.addDebouncedClickListener {
-            // Open School Website
             val urlIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://$website"))
             startActivity(urlIntent)
+        }
+
+        // Open School Scores
+        schoolScoresFAB.addDebouncedClickListener {
+            openSchoolScores()
         }
 
     }
@@ -199,6 +207,11 @@ class SchoolDetailActivity : AppCompatActivity() {
 
         }
 
+    }
+
+    private fun openSchoolScores() {
+        val intent = Intent(this, ScoresActivity::class.java)
+        startActivity(intent)
     }
 
     companion object {

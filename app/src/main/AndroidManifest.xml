@@ -31,6 +31,7 @@
         </activity>
 
         <activity android:name=".view.activities.SchoolDetailActivity" />
+        <activity android:name=".view.activities.ScoresActivity" />
 
     </application>
 
