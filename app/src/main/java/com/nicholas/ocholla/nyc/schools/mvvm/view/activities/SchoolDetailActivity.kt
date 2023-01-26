@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.content.res.Configuration
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.widget.ImageButton
@@ -45,6 +46,7 @@ class SchoolDetailActivity : AppCompatActivity() {
         val location = intent.getStringExtra("INTENT_EXTRA_LOCATION")
         val phone = intent.getStringExtra("INTENT_EXTRA_PHONE_NUMBER")
         val email = intent.getStringExtra("INTENT_EXTRA_SCHOOL_NAME")
+        val website = intent.getStringExtra("INTENT_EXTRA_WEBSITE")
 
         // Widgets
         val backBtn = findViewById<ImageButton>(R.id.ib_close)
@@ -77,7 +79,9 @@ class SchoolDetailActivity : AppCompatActivity() {
         }
 
         websiteCV.addDebouncedClickListener {
-
+            // Open School Website
+            val urlIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://$website"))
+            startActivity(urlIntent)
         }
 
     }
