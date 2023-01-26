@@ -130,7 +130,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/global_space_xxsmall"
-        android:background="@color/pearlGray"
+        android:background="@color/buttersGray"
         app:layout_constraintLeft_toRightOf="@id/iv_score"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_sat_scores_writing"
@@ -139,7 +139,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/global_space_xxsmall"
-        android:background="@color/pearlGray"
+        android:background="@color/buttersGray"
         android:layout_marginTop="@dimen/global_space_small_medium"
         app:layout_constraintLeft_toRightOf="@id/iv_score"
         app:layout_constraintRight_toRightOf="parent"
