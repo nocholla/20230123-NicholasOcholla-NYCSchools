@@ -33,30 +33,47 @@ class SchoolDetailActivity : AppCompatActivity() {
             requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         }
 
+        // Get Intents from School List Adapter
+        // Intents
+        val intent = intent
+
+        val schoolName = intent.getStringExtra("INTENT_EXTRA_SCHOOL_NAME")
+        val overviewParagraph = intent.getStringExtra("INTENT_EXTRA_OVERVIEW_PARAGRAPH")
+        val location = intent.getStringExtra("INTENT_EXTRA_LOCATION")
+        val phone = intent.getStringExtra("INTENT_EXTRA_PHONE_NUMBER")
+        val email = intent.getStringExtra("INTENT_EXTRA_SCHOOL_NAME")
+
         // Widgets
         val backBtn = findViewById<ImageButton>(R.id.ib_close)
-        val schoolName = findViewById<TextView>(R.id.tv_school_name)
-        val cardShare = findViewById<CardView>(R.id.card_share)
-        val cardSocial = findViewById<CardView>(R.id.card_social)
-        val cardWebsite = findViewById<CardView>(R.id.card_website)
-        val overviewParagraphContent = findViewById<TextView>(R.id.tv_overview_paragraph_content)
-        val academicOpportunitiesContent = findViewById<TextView>(R.id.tv_academic_opportunities_content)
-        val languageClassesContent = findViewById<TextView>(R.id.tv_language_classes_content)
-        val advancedPlacementCoursesContent = findViewById<TextView>(R.id.tv_advanced_placement_courses_content)
+        val schoolNameTV = findViewById<TextView>(R.id.tv_school_name_content)
+        val shareCV = findViewById<CardView>(R.id.card_share)
+        val socialCV = findViewById<CardView>(R.id.card_social)
+        val websiteCV = findViewById<CardView>(R.id.card_website)
+        val overviewParagraphContentTV = findViewById<TextView>(R.id.tv_overview_paragraph_content)
+        val locationTV = findViewById<TextView>(R.id.tv_location_content)
+        val phoneTV = findViewById<TextView>(R.id.tv_phone_content)
+        val emailTV = findViewById<TextView>(R.id.tv_email_content)
+
+        // Bind Data
+        schoolNameTV.text = schoolName
+        overviewParagraphContentTV.text = overviewParagraph
+        locationTV.text = location
+        phoneTV.text = phone
+        emailTV.text = email
 
         backBtn.setOnClickListener {
             finish()
         }
 
-        cardShare.addDebouncedClickListener {
+        shareCV.addDebouncedClickListener {
 
         }
 
-        cardSocial.addDebouncedClickListener {
+        socialCV.addDebouncedClickListener {
 
         }
 
-        cardWebsite.addDebouncedClickListener {
+        websiteCV.addDebouncedClickListener {
 
         }
 

@@ -35,31 +35,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/tv_subtitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/global_space_xxlarge"
-                android:textAppearance="@style/TextAppearance_Body4"
-                android:text="@string/new_york_city_schools"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tv_school_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/global_space_small"
-                android:layout_marginStart="@dimen/activity_horizontal_margin"
-                android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                android:textAppearance="@style/TextAppearance_Headline2"
-                android:gravity="center"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_subtitle"
-                tools:text="Brooklyn School for Music Theatre"/>
-
             <ImageView
                 android:id="@+id/iv_new_york_city_schools"
                 android:layout_width="200dp"
@@ -69,7 +44,7 @@
                 android:src="@drawable/placeholder_new_york_schools"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_school_name" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_social"
@@ -186,6 +161,35 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <!-- School Name -->
+            <TextView
+                android:id="@+id/tv_school_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/global_space_xlarge"
+                android:textAppearance="@style/TextAppearance_Body2_LatoBlack"
+                android:text="@string/school_name"
+                android:gravity="start"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_social" />
+
+            <TextView
+                android:id="@+id/tv_school_name_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/global_space_small"
+                android:textAppearance="@style/TextAppearance_Body2"
+                android:gravity="start"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_school_name"
+                tools:text="Clinton School Writers and Artists, M.S. 260"/>
+
             <!-- Overview -->
             <TextView
                 android:id="@+id/tv_overview_paragraph"
@@ -193,13 +197,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/activity_horizontal_margin"
                 android:layout_marginEnd="@dimen/activity_horizontal_margin"
-                android:layout_marginTop="@dimen/global_space_xlarge"
+                android:layout_marginTop="@dimen/global_space_medium"
                 android:textAppearance="@style/TextAppearance_Body2_LatoBlack"
                 android:text="@string/overview"
                 android:gravity="start"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layout_social" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_school_name_content" />
 
             <TextView
                 android:id="@+id/tv_overview_paragraph_content"
@@ -215,23 +219,23 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_overview_paragraph"
                 tools:text="Brooklyn School for Music Theatre (BSMT) uses our academic program to accommodate the intellectual, social, and emotional needs of creative high school students. Our vision is to provide a model professional environment where respect is mutual, ideas are shared, and learning is not limited to the classroom. We prepare students for higher education through our rigorous academic program while simultaneously allowing them to develop professional careers in the music and theatre industries."/>
 
-            <!-- Academic Opportunities -->
+            <!-- Location -->
             <TextView
-                android:id="@+id/tv_academic_opportunities"
+                android:id="@+id/tv_location"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/activity_horizontal_margin"
                 android:layout_marginEnd="@dimen/activity_horizontal_margin"
                 android:layout_marginTop="@dimen/global_space_medium"
                 android:textAppearance="@style/TextAppearance_Body2_LatoBlack"
-                android:text="@string/academic_opportunities"
+                android:text="@string/location"
                 android:gravity="start"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_overview_paragraph_content" />
 
             <TextView
-                android:id="@+id/tv_academic_opportunities_content"
+                android:id="@+id/tv_location_content"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/activity_horizontal_margin"
@@ -241,26 +245,26 @@
                 android:gravity="start"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_academic_opportunities"
-                tools:text="Individualized College, Academic and Career Planning; Advisory, Focus on developing strong writing skills"/>
+                app:layout_constraintTop_toBottomOf="@+id/tv_location"
+                tools:text="2865 West 19th Street, Brooklyn, NY 11224 (40.576976, -73.985413)"/>
 
-            <!-- Language Classes -->
+            <!-- Phone -->
             <TextView
-                android:id="@+id/tv_language_classes"
+                android:id="@+id/tv_phone_classes"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/activity_horizontal_margin"
                 android:layout_marginEnd="@dimen/activity_horizontal_margin"
                 android:layout_marginTop="@dimen/global_space_medium"
                 android:textAppearance="@style/TextAppearance_Body2_LatoBlack"
-                android:text="@string/language_classes"
+                android:text="@string/phone"
                 android:gravity="start"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_academic_opportunities_content" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_location_content" />
 
             <TextView
-                android:id="@+id/tv_language_classes_content"
+                android:id="@+id/tv_phone_content"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/activity_horizontal_margin"
@@ -270,26 +274,26 @@
                 android:gravity="start"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_language_classes"
-                tools:text="French, Spanish"/>
+                app:layout_constraintTop_toBottomOf="@+id/tv_phone_classes"
+                tools:text="718-542-0740"/>
 
-            <!-- Advanced Placement Courses -->
+            <!-- Email -->
             <TextView
-                android:id="@+id/tv_advanced_placement_courses"
+                android:id="@+id/tv_email_courses"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/activity_horizontal_margin"
                 android:layout_marginEnd="@dimen/activity_horizontal_margin"
                 android:layout_marginTop="@dimen/global_space_medium"
                 android:textAppearance="@style/TextAppearance_Body2_LatoBlack"
-                android:text="@string/advanced_placement_courses"
+                android:text="@string/email"
                 android:gravity="start"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_language_classes_content" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_phone_content" />
 
             <TextView
-                android:id="@+id/tv_advanced_placement_courses_content"
+                android:id="@+id/tv_email_content"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/activity_horizontal_margin"
@@ -300,15 +304,15 @@
                 android:gravity="start"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_advanced_placement_courses"
-                tools:text="AP Biology, AP English, AP Environmental Science, AP Statistics, AP US History, AP World History"/>
+                app:layout_constraintTop_toBottomOf="@+id/tv_email_courses"
+                tools:text="sburns@schools.nyc.gov"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_Spacer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/global_space_medium"
-                app:layout_constraintTop_toBottomOf="@id/tv_advanced_placement_courses_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_email_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent">

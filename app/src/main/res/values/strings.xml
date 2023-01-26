@@ -3,8 +3,11 @@
 
     <!-- General -->
     <string name="new_york_city_schools">New York City Schools</string>
+    <string name="school_name">School Name</string>
     <string name="overview">Overview</string>
-    <string name="academic_opportunities">Academic Opportunities</string>
+    <string name="location">Location</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
     <string name="language_classes">Language Classes</string>
     <string name="advanced_placement_courses">Advanced Placement Courses</string>
     <string name="sat_scores_math">Math</string>
