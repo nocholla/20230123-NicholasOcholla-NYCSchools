@@ -597,4 +597,10 @@
         <item name="android:textColor">@color/buttersGray</item>
     </style>
 
+    <!-- FAB Button Start -->
+    <style name="PrimaryActionButton" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/white</item>
+    </style>
+    <!-- FAB Button End -->
+
 </resources>
