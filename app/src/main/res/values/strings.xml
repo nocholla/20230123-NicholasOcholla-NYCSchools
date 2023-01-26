@@ -14,6 +14,8 @@
     <string name="school">School</string>
 
     <!-- Button -->
-    <string name="btn_share">Share</string>
+    <string name="share">Share</string>
+    <string name="social">Social</string>
+    <string name="website">Website</string>
 
 </resources>

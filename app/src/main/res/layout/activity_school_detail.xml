@@ -64,18 +64,120 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_title"
                 tools:srcCompat="@drawable/placeholder_new_york_schools" />
 
-            <Button
-                android:id="@+id/btn_share"
-                style="@style/primaryButton"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_social"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/global_space_xxlarge"
-                android:layout_marginTop="@dimen/global_space_xlarge"
-                android:visibility="visible"
-                android:text="@string/btn_share"
+                android:layout_marginTop="@dimen/global_space_large"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/iv_new_york_city_schools" />
+                app:layout_constraintTop_toBottomOf="@+id/iv_new_york_city_schools">
+
+                <TextView
+                    android:id="@+id/tv_share_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share"
+                    android:visibility="gone"
+                    android:textAppearance="@style/TextAppearance_Body2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_share"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:layout_marginTop="@dimen/global_space_medium"
+                    android:layout_marginEnd="@dimen/global_space_large"
+                    app:cardBackgroundColor="@color/primaryBlue"
+                    app:cardCornerRadius="@dimen/global_space_small"
+                    app:layout_constraintEnd_toStartOf="@+id/card_social"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_share_title">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_size_small"
+                        android:layout_height="@dimen/icon_size_small"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        app:srcCompat="@drawable/ic_share"
+                        app:tint="@color/white" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_social"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:layout_marginTop="@dimen/global_space_medium"
+                    app:cardBackgroundColor="@color/primaryBlue"
+                    app:cardCornerRadius="@dimen/global_space_small"
+                    app:layout_constraintStart_toStartOf="@+id/tv_share_title"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_share_title"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_share_title">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_size_small"
+                        android:layout_height="@dimen/icon_size_small"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        app:srcCompat="@drawable/ic_social"
+                        app:tint="@color/white" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_website"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:layout_marginStart="@dimen/global_space_large"
+                    android:layout_marginTop="@dimen/global_space_medium"
+                    app:cardBackgroundColor="@color/primaryBlue"
+                    app:cardCornerRadius="@dimen/global_space_small"
+                    app:layout_constraintStart_toEndOf="@+id/card_social"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_share_title">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_size_small"
+                        android:layout_height="@dimen/icon_size_small"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        app:srcCompat="@drawable/ic_website"
+                        app:tint="@color/white" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/share"
+                    android:textAppearance="@style/TextAppearance_Micro2"
+                    app:layout_constraintStart_toStartOf="@+id/card_share"
+                    app:layout_constraintEnd_toEndOf="@+id/card_share"
+                    app:layout_constraintTop_toBottomOf="@+id/card_share" />
+
+                <TextView
+                    android:id="@+id/tv_social"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/social"
+                    android:textAppearance="@style/TextAppearance_Micro2"
+                    app:layout_constraintStart_toStartOf="@+id/card_social"
+                    app:layout_constraintEnd_toEndOf="@+id/card_social"
+                    app:layout_constraintTop_toBottomOf="@+id/card_social" />
+
+                <TextView
+                    android:id="@+id/tv_website"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/website"
+                    android:textAppearance="@style/TextAppearance_Micro2"
+                    app:layout_constraintStart_toStartOf="@+id/card_website"
+                    app:layout_constraintEnd_toEndOf="@+id/card_website"
+                    app:layout_constraintTop_toBottomOf="@+id/card_website" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <!-- Overview -->
             <TextView
@@ -90,7 +192,7 @@
                 android:gravity="start"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_share" />
+                app:layout_constraintTop_toBottomOf="@+id/layout_social" />
 
             <TextView
                 android:id="@+id/tv_overview_paragraph_content"

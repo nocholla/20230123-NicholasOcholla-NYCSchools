@@ -64,7 +64,8 @@
     <dimen name="multiline_edittext_padding">20dp</dimen>
     <dimen name="corner_radius_rounded_dialog">12dp</dimen>
     <dimen name="corner_radius_card_popup">10dp</dimen>
-    <dimen name="icon_width">30dp</dimen>
+    <dimen name="icon_size_small">30dp</dimen>
+    <dimen name="icon_size">55dp</dimen>
 
     <!-- Toolbar -->
     <dimen name="toolbar_margin_top">55dp</dimen>
