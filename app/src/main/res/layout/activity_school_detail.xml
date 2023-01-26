@@ -56,7 +56,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/iv_new_york_city_schools">
 
                 <TextView
-                    android:id="@+id/tv_share_title"
+                    android:id="@+id/tv_feedback_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/share"
@@ -75,7 +75,7 @@
                     app:cardBackgroundColor="@color/primaryBlue"
                     app:cardCornerRadius="@dimen/global_space_small"
                     app:layout_constraintEnd_toStartOf="@+id/card_social"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_share_title">
+                    app:layout_constraintTop_toBottomOf="@+id/tv_feedback_title">
 
                     <ImageView
                         android:layout_width="@dimen/icon_size_small"
@@ -93,9 +93,9 @@
                     android:layout_marginTop="@dimen/global_space_medium"
                     app:cardBackgroundColor="@color/primaryBlue"
                     app:cardCornerRadius="@dimen/global_space_small"
-                    app:layout_constraintStart_toStartOf="@+id/tv_share_title"
-                    app:layout_constraintEnd_toEndOf="@+id/tv_share_title"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_share_title">
+                    app:layout_constraintStart_toStartOf="@+id/tv_feedback_title"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_feedback_title"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_feedback_title">
 
                     <ImageView
                         android:layout_width="@dimen/icon_size_small"
@@ -115,7 +115,7 @@
                     app:cardBackgroundColor="@color/primaryBlue"
                     app:cardCornerRadius="@dimen/global_space_small"
                     app:layout_constraintStart_toEndOf="@+id/card_social"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_share_title">
+                    app:layout_constraintTop_toBottomOf="@+id/tv_feedback_title">
 
                     <ImageView
                         android:layout_width="@dimen/icon_size_small"
@@ -127,11 +127,11 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/tv_share"
+                    android:id="@+id/tv_feedback"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="@string/share"
+                    android:text="@string/feedback"
                     android:textAppearance="@style/TextAppearance_Micro2"
                     app:layout_constraintStart_toStartOf="@+id/card_share"
                     app:layout_constraintEnd_toEndOf="@+id/card_share"

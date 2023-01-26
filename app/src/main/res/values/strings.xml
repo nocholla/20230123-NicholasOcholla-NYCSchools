@@ -18,7 +18,11 @@
 
     <!-- Button -->
     <string name="share">Share</string>
+    <string name="feedback">Feedback</string>
     <string name="social">Social</string>
     <string name="website">Website</string>
+
+    <!-- Toast -->
+    <string name="toast_no_app_to_share">No app to share</string>
 
 </resources>
