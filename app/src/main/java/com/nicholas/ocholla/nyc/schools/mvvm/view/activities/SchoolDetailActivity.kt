@@ -7,7 +7,7 @@ import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
-import android.widget.ImageView
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
@@ -23,7 +23,7 @@ class SchoolDetailActivity : AppCompatActivity() {
         get() = (this.resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK >= Configuration.SCREENLAYOUT_SIZE_LARGE)
 
     @RequiresApi(Build.VERSION_CODES.M)
-    @SuppressLint("SourceLockedOrientationActivity")
+    @SuppressLint("SourceLockedOrientationActivity", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_school_detail)
@@ -34,7 +34,7 @@ class SchoolDetailActivity : AppCompatActivity() {
         }
 
         // Widgets
-        val backBtn = findViewById<ImageView>(R.id.toolBar)
+        val backBtn = findViewById<ImageButton>(R.id.ib_close)
         val schoolName = findViewById<TextView>(R.id.tv_school_name)
         val cardShare = findViewById<CardView>(R.id.card_share)
         val cardSocial = findViewById<CardView>(R.id.card_social)
