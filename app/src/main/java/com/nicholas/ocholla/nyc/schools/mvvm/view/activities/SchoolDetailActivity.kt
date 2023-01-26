@@ -28,6 +28,9 @@ class SchoolDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_school_detail)
 
+        // Hide Toolbar
+        supportActionBar?.hide()
+
         // Orientation Check
         if (!isTablet) {
             requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
