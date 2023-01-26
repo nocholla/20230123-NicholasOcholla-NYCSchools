@@ -69,5 +69,6 @@
 
     <!-- Toolbar -->
     <dimen name="toolbar_margin_top">55dp</dimen>
+    <dimen name="toolbar_margin_top_large">65dp</dimen>
 
 </resources>

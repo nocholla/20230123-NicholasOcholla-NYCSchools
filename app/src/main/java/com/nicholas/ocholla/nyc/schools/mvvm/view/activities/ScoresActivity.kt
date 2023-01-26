@@ -7,6 +7,7 @@ import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageButton
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -28,10 +29,16 @@ class ScoresActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scores)
 
+        // Hide Toolbar
+        supportActionBar?.hide()
+
         // Orientation Check
         if (!isTablet) {
             requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         }
+
+        // Widgets
+        val backBtn = findViewById<ImageButton>(R.id.ib_close)
 
         viewModel = ViewModelProviders.of(this)[ListViewModel::class.java]
         viewModel.refresh()
@@ -44,6 +51,10 @@ class ScoresActivity : AppCompatActivity() {
         swipeRefreshLayout.setOnRefreshListener {
             swipeRefreshLayout.isRefreshing = false
             viewModel.refresh()
+        }
+
+        backBtn.setOnClickListener {
+            finish()
         }
 
         observeViewModel()
