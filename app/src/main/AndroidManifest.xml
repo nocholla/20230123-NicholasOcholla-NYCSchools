@@ -15,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.20230123NicholasOchollaNYCSchools"
         tools:targetApi="31" >
+
         <activity
             android:name=".MainActivity"
             android:exported="true" >
@@ -28,6 +29,9 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <activity android:name=".view.activities.SchoolDetailActivity" />
+
     </application>
 
 </manifest>
