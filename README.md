@@ -1,4 +1,4 @@
-# NYCSchools - MVVM Architecture / RxJava / Kotlin
+# NYC Schools - MVVM Architecture / RxJava / Retrofit / Kotlin
 MVVM Kotlin
 
 # Features
@@ -14,7 +14,7 @@ MVVM Kotlin
 # Bonus
 ⁃	App is developed using Kotlin 100%
 ⁃	Use of MVVM architecture
-⁃	Use of RxJava for Dependency injection
+⁃	Use of RxJava for reactive programming
 ⁃	Successful Unit Testing for List View Model
 ⁃	Clean code
 ⁃	Explanations provided within the code
