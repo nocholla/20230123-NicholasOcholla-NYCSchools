@@ -1,4 +1,4 @@
-# 20230123-NicholasOcholla-NYCSchools
+# NYCSchools - MVVM Architecture / RxJava / Kotlin
 MVVM Kotlin
 
 # Features
