@@ -1,12 +1,12 @@
-package com.nicholas.ocholla.nyc.schools.mvvm.view
+package com.nicholas.ocholla.nyc.schools.mvvm.view.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.nicholas.ocholla.nyc.schools.mvvm.model.Score
 import com.nicholas.ocholla.nyc.schools.mvvm.databinding.ItemScoreBinding
+import com.nicholas.ocholla.nyc.schools.mvvm.model.Score
 
 class ScoreListAdapter(
     private val context: Context,

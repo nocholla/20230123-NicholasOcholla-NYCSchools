@@ -1,5 +1,6 @@
-package com.nicholas.ocholla.nyc.schools.mvvm.model
+package com.nicholas.ocholla.nyc.schools.mvvm.data.api
 
+import com.nicholas.ocholla.nyc.schools.mvvm.model.Score
 import io.reactivex.Single
 import retrofit2.http.GET
 

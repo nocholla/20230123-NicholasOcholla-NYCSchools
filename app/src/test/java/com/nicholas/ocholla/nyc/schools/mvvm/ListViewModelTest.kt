@@ -2,7 +2,7 @@ package com.nicholas.ocholla.nyc.schools.mvvm
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.nicholas.ocholla.nyc.schools.mvvm.model.School
-import com.nicholas.ocholla.nyc.schools.mvvm.model.SchoolsService
+import com.nicholas.ocholla.nyc.schools.mvvm.data.service.SchoolsService
 import com.nicholas.ocholla.nyc.schools.mvvm.viewmodel.ListViewModel
 import io.reactivex.Scheduler
 import io.reactivex.Single

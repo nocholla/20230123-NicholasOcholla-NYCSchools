@@ -1,7 +1,7 @@
 package com.nicholas.ocholla.nyc.schools.mvvm.di
 
-import com.nicholas.ocholla.nyc.schools.mvvm.model.SchoolsService
-import com.nicholas.ocholla.nyc.schools.mvvm.model.ScoresService
+import com.nicholas.ocholla.nyc.schools.mvvm.data.service.SchoolsService
+import com.nicholas.ocholla.nyc.schools.mvvm.data.service.ScoresService
 import com.nicholas.ocholla.nyc.schools.mvvm.viewmodel.ListViewModel
 import dagger.Component
 

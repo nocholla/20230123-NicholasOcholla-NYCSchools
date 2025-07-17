@@ -4,9 +4,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.nicholas.ocholla.nyc.schools.mvvm.di.DaggerApiComponent
 import com.nicholas.ocholla.nyc.schools.mvvm.model.School
-import com.nicholas.ocholla.nyc.schools.mvvm.model.SchoolsService
+import com.nicholas.ocholla.nyc.schools.mvvm.data.service.SchoolsService
 import com.nicholas.ocholla.nyc.schools.mvvm.model.Score
-import com.nicholas.ocholla.nyc.schools.mvvm.model.ScoresService
+import com.nicholas.ocholla.nyc.schools.mvvm.data.service.ScoresService
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver

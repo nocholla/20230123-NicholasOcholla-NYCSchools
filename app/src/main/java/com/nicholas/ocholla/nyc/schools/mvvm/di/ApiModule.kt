@@ -1,9 +1,9 @@
 package com.nicholas.ocholla.nyc.schools.mvvm.di
 
-import com.nicholas.ocholla.nyc.schools.mvvm.model.SchoolsApi
-import com.nicholas.ocholla.nyc.schools.mvvm.model.SchoolsService
-import com.nicholas.ocholla.nyc.schools.mvvm.model.ScoresApi
-import com.nicholas.ocholla.nyc.schools.mvvm.model.ScoresService
+import com.nicholas.ocholla.nyc.schools.mvvm.data.api.SchoolsApi
+import com.nicholas.ocholla.nyc.schools.mvvm.data.service.SchoolsService
+import com.nicholas.ocholla.nyc.schools.mvvm.data.api.ScoresApi
+import com.nicholas.ocholla.nyc.schools.mvvm.data.service.ScoresService
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit

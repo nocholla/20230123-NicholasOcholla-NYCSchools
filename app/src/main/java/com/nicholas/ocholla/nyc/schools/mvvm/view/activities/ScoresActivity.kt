@@ -9,7 +9,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.nicholas.ocholla.nyc.schools.mvvm.view.ScoreListAdapter
+import com.nicholas.ocholla.nyc.schools.mvvm.view.adapter.ScoreListAdapter
 import com.nicholas.ocholla.nyc.schools.mvvm.viewmodel.ListViewModel
 import com.nicholas.ocholla.nyc.schools.mvvm.databinding.ActivityScoresBinding
 import androidx.activity.viewModels

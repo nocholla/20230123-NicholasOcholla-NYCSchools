@@ -10,7 +10,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.nicholas.ocholla.nyc.schools.mvvm.view.SchoolListAdapter
+import com.nicholas.ocholla.nyc.schools.mvvm.view.adapter.SchoolListAdapter
 import com.nicholas.ocholla.nyc.schools.mvvm.viewmodel.ListViewModel
 import com.nicholas.ocholla.nyc.schools.mvvm.databinding.ActivityMainBinding
 import androidx.activity.viewModels

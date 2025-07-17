@@ -1,4 +1,4 @@
-package com.nicholas.ocholla.nyc.schools.mvvm.view
+package com.nicholas.ocholla.nyc.schools.mvvm.view.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -9,10 +9,10 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.nicholas.ocholla.nyc.schools.mvvm.databinding.ItemSchoolBinding
 import com.nicholas.ocholla.nyc.schools.mvvm.model.School
 import com.nicholas.ocholla.nyc.schools.mvvm.util.addDebouncedClickListener
 import com.nicholas.ocholla.nyc.schools.mvvm.view.activities.SchoolDetailActivity
-import com.nicholas.ocholla.nyc.schools.mvvm.databinding.ItemSchoolBinding // IMPORT VIEW BINDING CLASS
 
 class SchoolListAdapter(private val context: Context, var schools: ArrayList<School>): RecyclerView.Adapter<SchoolListAdapter.SchoolViewHolder>() {
 
