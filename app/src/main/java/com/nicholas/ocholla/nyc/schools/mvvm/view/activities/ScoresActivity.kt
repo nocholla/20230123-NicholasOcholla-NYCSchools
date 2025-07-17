@@ -7,27 +7,32 @@ import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageButton
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.nicholas.ocholla.nyc.schools.mvvm.R
 import com.nicholas.ocholla.nyc.schools.mvvm.view.ScoreListAdapter
 import com.nicholas.ocholla.nyc.schools.mvvm.viewmodel.ListViewModel
-import kotlinx.android.synthetic.main.activity_scores.*
+import com.nicholas.ocholla.nyc.schools.mvvm.databinding.ActivityScoresBinding
+import androidx.activity.viewModels
 
 class ScoresActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityScoresBinding // Declare binding
+
     // Orientation
     private val isTablet: Boolean
-        get() = (this.resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK >= Configuration.SCREENLAYOUT_SIZE_LARGE)
+        get() = (
+                this.resources.configuration.screenLayout and
+                        Configuration.SCREENLAYOUT_SIZE_MASK >=
+                        Configuration.SCREENLAYOUT_SIZE_LARGE)
 
-    lateinit var viewModel: ListViewModel
+    // Use by viewModels() delegate for ViewModel initialization
+    private val viewModel: ListViewModel by viewModels()
     private val scoresAdapter = ScoreListAdapter(this, arrayListOf())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_scores)
+        binding = ActivityScoresBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // Hide Toolbar
         supportActionBar?.hide()
@@ -37,46 +42,43 @@ class ScoresActivity : AppCompatActivity() {
             requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         }
 
-        // Widgets
-        val backBtn = findViewById<ImageButton>(R.id.ib_close)
+        binding.ibClose.setOnClickListener {
+            finish()
+        }
 
-        viewModel = ViewModelProviders.of(this)[ListViewModel::class.java]
         viewModel.refresh()
 
-        scoresList.apply {
+        binding.scoresList.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = scoresAdapter
         }
 
-        swipeRefreshLayout.setOnRefreshListener {
-            swipeRefreshLayout.isRefreshing = false
+        binding.swipeRefreshLayout.setOnRefreshListener {
+            binding.swipeRefreshLayout.isRefreshing = false
             viewModel.refresh()
-        }
-
-        backBtn.setOnClickListener {
-            finish()
         }
 
         observeViewModel()
     }
 
     private fun observeViewModel() {
-        viewModel.scores.observe(this, Observer {scores ->
+        viewModel.scores.observe(this, Observer { scores ->
             scores?.let {
-                scoresList.visibility = View.VISIBLE
-                scoresAdapter.updateScores(it) }
+                binding.scoresList.visibility = View.VISIBLE
+                scoresAdapter.updateScores(it)
+            }
         })
 
         viewModel.scoreLoadError.observe(this, Observer { isError ->
-            isError?.let { list_error.visibility = if(it) View.VISIBLE else View.GONE }
+            isError?.let { binding.listError.visibility = if(it) View.VISIBLE else View.GONE }
         })
 
         viewModel.loading.observe(this, Observer { isLoading ->
             isLoading?.let {
-                loading_view.visibility = if(it) View.VISIBLE else View.GONE
+                binding.loadingView.visibility = if(it) View.VISIBLE else View.GONE
                 if(it) {
-                    list_error.visibility = View.GONE
-                    scoresList.visibility = View.GONE
+                    binding.listError.visibility = View.GONE
+                    binding.scoresList.visibility = View.GONE
                 }
             }
         })
@@ -84,8 +86,6 @@ class ScoresActivity : AppCompatActivity() {
 
     companion object {
         val TAG = "ScoresActivity"
-
         fun newIntent(context: Context) = Intent(context, ScoresActivity::class.java)
     }
-
 }

@@ -2,15 +2,16 @@ package com.nicholas.ocholla.nyc.schools.mvvm.view
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.nicholas.ocholla.nyc.schools.mvvm.R
 import com.nicholas.ocholla.nyc.schools.mvvm.model.Score
-import kotlinx.android.synthetic.main.item_score.view.*
+import com.nicholas.ocholla.nyc.schools.mvvm.databinding.ItemScoreBinding
 
-class ScoreListAdapter(private val context: Context, var scores: ArrayList<Score>): RecyclerView.Adapter<ScoreListAdapter.ScoreViewHolder>() {
+class ScoreListAdapter(
+    private val context: Context,
+    var scores: ArrayList<Score>
+): RecyclerView.Adapter<ScoreListAdapter.ScoreViewHolder>() {
 
     fun updateScores(newScores: List<Score>) {
         scores.clear()
@@ -19,7 +20,7 @@ class ScoreListAdapter(private val context: Context, var scores: ArrayList<Score
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, position: Int) = ScoreViewHolder(
-        LayoutInflater.from(parent.context).inflate(R.layout.item_score, parent, false)
+        ItemScoreBinding.inflate(LayoutInflater.from(parent.context), parent, false)
     )
 
     override fun getItemCount() = scores.size
@@ -28,12 +29,15 @@ class ScoreListAdapter(private val context: Context, var scores: ArrayList<Score
         holder.bind(context, scores[position])
     }
 
-    class ScoreViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    class ScoreViewHolder(
+        private val binding: ItemScoreBinding
+    ): RecyclerView.ViewHolder(binding.root) {
 
-        private val scoreName: TextView = itemView.tv_school_name
-        private val scoreMath: TextView = itemView.tv_sat_scores_math
-        private val scoreReading: TextView = itemView.tv_sat_scores_reading
-        private val scoreWriting: TextView = itemView.tv_sat_scores_writing
+        // Access views directly from binding object
+        private val scoreName: TextView = binding.tvSchoolName
+        private val scoreMath: TextView = binding.tvSatScoresMath
+        private val scoreReading: TextView = binding.tvSatScoresReading
+        private val scoreWriting: TextView = binding.tvSatScoresWriting
 
         fun bind(context: Context, score: Score) {
             val name = score.schoolName
@@ -46,7 +50,5 @@ class ScoreListAdapter(private val context: Context, var scores: ArrayList<Score
             scoreReading.text = reading
             scoreWriting.text = writing
         }
-
     }
-
 }

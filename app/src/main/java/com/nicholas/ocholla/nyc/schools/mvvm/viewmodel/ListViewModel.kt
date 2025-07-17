@@ -45,17 +45,17 @@ class ListViewModel: ViewModel() {
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(object: DisposableSingleObserver<List<School>>() {
-                    override fun onSuccess(value: List<School>?) {
+                    override fun onSuccess(value: List<School>) {
                         schools.value = value
                         schoolLoadError.value = false
                         loading.value = false
                     }
 
-                    override fun onError(e: Throwable?) {
+                    override fun onError(e: Throwable) {
                         schoolLoadError.value = true
                         loading.value = false
+                        e.printStackTrace()
                     }
-
                 })
         )
     }
@@ -67,17 +67,17 @@ class ListViewModel: ViewModel() {
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(object: DisposableSingleObserver<List<Score>>() {
-                    override fun onSuccess(value: List<Score>?) {
+                    override fun onSuccess(value: List<Score>) {
                         scores.value = value
                         scoreLoadError.value = false
                         loading.value = false
                     }
 
-                    override fun onError(e: Throwable?) {
+                    override fun onError(e: Throwable) {
                         scoreLoadError.value = true
                         loading.value = false
+                        e.printStackTrace()
                     }
-
                 })
         )
     }
@@ -86,5 +86,4 @@ class ListViewModel: ViewModel() {
         super.onCleared()
         disposable.clear()
     }
-
 }

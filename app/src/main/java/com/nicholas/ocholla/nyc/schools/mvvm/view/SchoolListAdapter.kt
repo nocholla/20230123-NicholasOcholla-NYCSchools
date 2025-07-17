@@ -4,17 +4,15 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.nicholas.ocholla.nyc.schools.mvvm.R
 import com.nicholas.ocholla.nyc.schools.mvvm.model.School
 import com.nicholas.ocholla.nyc.schools.mvvm.util.addDebouncedClickListener
 import com.nicholas.ocholla.nyc.schools.mvvm.view.activities.SchoolDetailActivity
-import kotlinx.android.synthetic.main.item_school.view.*
+import com.nicholas.ocholla.nyc.schools.mvvm.databinding.ItemSchoolBinding // IMPORT VIEW BINDING CLASS
 
 class SchoolListAdapter(private val context: Context, var schools: ArrayList<School>): RecyclerView.Adapter<SchoolListAdapter.SchoolViewHolder>() {
 
@@ -25,7 +23,7 @@ class SchoolListAdapter(private val context: Context, var schools: ArrayList<Sch
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, position: Int) = SchoolViewHolder(
-        LayoutInflater.from(parent.context).inflate(R.layout.item_school, parent, false)
+        ItemSchoolBinding.inflate(LayoutInflater.from(parent.context), parent, false) // Use View Binding to inflate
     )
 
     override fun getItemCount() = schools.size
@@ -34,14 +32,15 @@ class SchoolListAdapter(private val context: Context, var schools: ArrayList<Sch
         holder.bind(context, schools[position])
     }
 
-    class SchoolViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    class SchoolViewHolder(private val binding: ItemSchoolBinding): RecyclerView.ViewHolder(binding.root) { // Pass binding here
 
-        private val schoolCard: CardView = itemView.cv_school
-        private val schoolName: TextView = itemView.tv_school_name
-        private val schoolOverview: TextView = itemView.tv_overview_paragraph
-        private val schoolEmail: ImageButton = itemView.ib_school_email
-        private val schoolCall: ImageButton = itemView.ib_school_call
-        private val schoolText: ImageButton = itemView.ib_school_text
+        // Access views directly from binding object
+        private val schoolCard: CardView = binding.cvSchool
+        private val schoolName: TextView = binding.tvSchoolName
+        private val schoolOverview: TextView = binding.tvOverviewParagraph
+        private val schoolEmail: ImageButton = binding.ibSchoolEmail
+        private val schoolCall: ImageButton = binding.ibSchoolCall
+        private val schoolText: ImageButton = binding.ibSchoolText
 
         fun bind(context: Context, school: School) {
             val name = school.schoolName
@@ -50,7 +49,6 @@ class SchoolListAdapter(private val context: Context, var schools: ArrayList<Sch
             val phone = school.phoneNumber
 
             schoolName.text = name
-
             schoolOverview.text = overview
 
             // Send email to School
@@ -82,7 +80,6 @@ class SchoolListAdapter(private val context: Context, var schools: ArrayList<Sch
 
             // Open School Detail Activity
             schoolCard.setOnClickListener {
-
                 // Set Intent
                 val intent = Intent(context, SchoolDetailActivity::class.java)
 
@@ -150,10 +147,7 @@ class SchoolListAdapter(private val context: Context, var schools: ArrayList<Sch
                 intent.putExtra("INTENT_EXTRA_BOROUGH", school.borough)
 
                 context.startActivity(intent)
-
             }
         }
-
     }
-
 }
